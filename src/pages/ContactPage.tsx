@@ -3,7 +3,6 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Loader } f
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
-import { supabase } from '../lib/supabase';
 
 interface FormData {
   name: string;
@@ -41,7 +40,8 @@ export default function ContactPage() {
     setError('');
 
     try {
-      const { error: submitError } = await supabase.from('contact_submissions').insert([formData]);
+        // Simulate API call
+      const submitError = new Error('Failed to send message. Please try again.');
 
       if (submitError) throw submitError;
 
