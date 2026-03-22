@@ -79,6 +79,7 @@ export default function HowItWorks() {
           <img
             src="/dashboard.jpg"
             alt="Workflow Visualization"
+            loading="lazy"
             className="w-full h-96 object-cover"
           />
         </div>

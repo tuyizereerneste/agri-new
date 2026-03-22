@@ -54,6 +54,7 @@ export default function PartnerSection() {
             <img
               src="https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Partnership"
+              loading="lazy"
               className="rounded-xl shadow-medium w-full h-96 object-cover"
             />
           </div>

@@ -58,6 +58,7 @@ export default function PlatformFeatures() {
                   <img
                     src={feature.image}
                     alt={feature.title}
+                    loading="lazy"
                     className="rounded-xl shadow-medium w-full h-96 object-cover"
                   />
                 </>
@@ -66,6 +67,7 @@ export default function PlatformFeatures() {
                   <img
                     src={feature.image}
                     alt={feature.title}
+                    loading="lazy"
                     className="rounded-xl shadow-medium w-full h-96 object-cover mb-6"
                   />
                   <div>

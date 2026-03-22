@@ -56,6 +56,7 @@ export default function Hero() {
               <img
                 src="/hero.jpg"
                 alt="Agricultural Technology"
+                loading='lazy'
                 className="rounded-2xl shadow-medium w-full h-full object-cover"
               />
             </div>

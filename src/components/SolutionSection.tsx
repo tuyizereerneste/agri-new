@@ -72,6 +72,7 @@ export default function SolutionSection() {
           <img
             src="https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=1200"
             alt="AgriFlow Platform Dashboard"
+            loading="lazy"
             className="w-full h-auto object-cover"
           />
         </div>

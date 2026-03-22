@@ -59,6 +59,7 @@ export default function ImpactSection() {
           <div className="animate-slide-in-right">
             <img
               src="https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=800"
+              loading="lazy"
               alt="Data Analytics"
               className="rounded-xl shadow-medium w-full h-96 object-cover"
             />
