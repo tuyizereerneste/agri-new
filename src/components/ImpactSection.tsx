@@ -35,7 +35,7 @@ export default function ImpactSection() {
             </h2>
 
             <p className="text-xl text-agri-text mb-8 leading-relaxed">
-              AgriFlow helps organizations manage beneficiary data effectively, monitor field activities in real time, improve transparency and accountability, and measure program outcomes.
+              Imbonicard helps organizations manage beneficiary data effectively, monitor field activities in real time, improve transparency and accountability, and measure program outcomes.
             </p>
 
             <div className="space-y-6">
@@ -68,11 +68,11 @@ export default function ImpactSection() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-gray-300">
           <div className="text-center animate-fade-in">
-            <div className="text-4xl font-poppins font-800 text-agri-primary">500K+</div>
+            <div className="text-4xl font-poppins font-800 text-agri-primary">100K+</div>
             <p className="text-agri-text mt-2">Beneficiaries Tracked</p>
           </div>
           <div className="text-center animate-fade-in" style={{ animationDelay: '100ms' }}>
-            <div className="text-4xl font-poppins font-800 text-agri-primary">50+</div>
+            <div className="text-4xl font-poppins font-800 text-agri-primary">10+</div>
             <p className="text-agri-text mt-2">Organizations</p>
           </div>
           <div className="text-center animate-fade-in" style={{ animationDelay: '200ms' }}>
@@ -80,7 +80,7 @@ export default function ImpactSection() {
             <p className="text-agri-text mt-2">Program Records</p>
           </div>
           <div className="text-center animate-fade-in" style={{ animationDelay: '300ms' }}>
-            <div className="text-4xl font-poppins font-800 text-agri-primary">30+</div>
+            <div className="text-4xl font-poppins font-800 text-agri-primary">2</div>
             <p className="text-agri-text mt-2">Countries</p>
           </div>
         </div>

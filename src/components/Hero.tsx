@@ -25,7 +25,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-agri-text mb-8 leading-relaxed max-w-xl">
-              AgriFlow helps organizations manage beneficiaries, track field activities, and monitor program outcomes across agriculture, environmental initiatives, green energy projects, and community development programs.
+              Imbonicard helps organizations manage beneficiaries, track field activities, and monitor program outcomes across agriculture, environmental initiatives, green energy projects, and community development programs.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -40,11 +40,11 @@ export default function Hero() {
 
             <div className="grid grid-cols-2 gap-6 mt-12 pt-8 border-t border-gray-300">
               <div>
-                <div className="text-3xl font-poppins font-700 text-agri-primary">500K+</div>
+                <div className="text-3xl font-poppins font-700 text-agri-primary">100K+</div>
                 <p className="text-agri-text mt-2">Beneficiaries Tracked</p>
               </div>
               <div>
-                <div className="text-3xl font-poppins font-700 text-agri-primary">50+</div>
+                <div className="text-3xl font-poppins font-700 text-agri-primary">10+</div>
                 <p className="text-agri-text mt-2">Organizations</p>
               </div>
             </div>

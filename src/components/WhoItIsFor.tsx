@@ -40,10 +40,10 @@ export default function WhoItIsFor() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-5xl font-poppins font-800 text-agri-dark mb-6">
-            Sectors That Use AgriFlow
+            Sectors That Use Imbonicard
           </h2>
           <p className="text-xl text-agri-text max-w-2xl mx-auto">
-            AgriFlow serves organizations across multiple development sectors working to improve outcomes and track program impact.
+            Imbonicard serves organizations across multiple development sectors working to improve outcomes and track program impact.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export default function WhoItIsFor() {
             Build Data-Driven Development Programs
           </h3>
           <p className="text-lg text-green-100 mb-8">
-            AgriFlow enables organizations across all development sectors to manage beneficiaries effectively and track program impact with reliable digital infrastructure.
+            Imbonicard enables organizations across all development sectors to manage beneficiaries effectively and track program impact with reliable digital infrastructure.
           </p>
         </div>
       </div>

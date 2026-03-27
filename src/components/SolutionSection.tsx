@@ -43,7 +43,7 @@ export default function SolutionSection() {
             A Modern Platform for Program Monitoring and Beneficiary Management
           </h2>
           <p className="text-xl text-agri-text max-w-3xl mx-auto">
-            AgriFlow provides a centralized digital platform that enables organizations to manage beneficiaries, monitor project activities, and measure outcomes across multiple development sectors. The platform transforms field data into actionable insights, helping organizations improve transparency, accountability, and decision-making.
+            Imbonicard provides a centralized digital platform that enables organizations to manage beneficiaries, monitor project activities, and measure outcomes across multiple development sectors. The platform transforms field data into actionable insights, helping organizations improve transparency, accountability, and decision-making.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function SolutionSection() {
         <div className="mt-16 rounded-xl overflow-hidden shadow-medium">
           <img
             src="https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="AgriFlow Platform Dashboard"
+            alt="Imbonicard Platform Dashboard"
             loading="lazy"
             className="w-full h-auto object-cover"
           />

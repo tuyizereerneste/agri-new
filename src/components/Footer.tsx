@@ -13,7 +13,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-agri-primary rounded-lg flex items-center justify-center">
                 <Leaf className="w-6 h-6 text-white" />
               </div>
-              <span className="font-poppins font-700 text-xl">AgriFlow</span>
+              <span className="font-poppins font-700 text-xl">Imbonicard</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Digital infrastructure for agricultural development and farmer network management.
@@ -88,7 +88,7 @@ export default function Footer() {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="mailto:hello@agriflow.tech"
+                href="mailto:hello@imbonicard.com"
                 className="w-10 h-10 bg-agri-primary rounded-lg flex items-center justify-center hover:bg-agri-secondary transition-colors"
               >
                 <Mail className="w-5 h-5" />
@@ -98,7 +98,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; {currentYear} AgriFlow. All rights reserved. | Empowering Agricultural Development Through Technology</p>
+          <p>&copy; {currentYear} Imbonicard. All rights reserved. | Empowering Agricultural Development Through Technology</p>
         </div>
       </div>
     </footer>

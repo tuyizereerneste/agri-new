@@ -34,7 +34,7 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-5xl font-poppins font-800 text-agri-dark mb-6">
-            How AgriFlow Works
+            How Imbonicard Works
           </h2>
           <p className="text-xl text-agri-text max-w-2xl mx-auto">
             A streamlined workflow designed to simplify program monitoring and data collection across agriculture, environmental projects, green energy programs, and community development initiatives.

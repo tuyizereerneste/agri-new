@@ -14,7 +14,7 @@ export default function FinalCTA() {
         </h2>
 
         <p className="text-xl text-agri-text mb-12 leading-relaxed">
-          AgriFlow helps organizations across agriculture, environmental conservation, green energy,
+          Imbonicard helps organizations across agriculture, environmental conservation, green energy,
           and development programs build digital infrastructure for effective monitoring and data-driven
           decision making. Ready to get started?
         </p>
@@ -42,8 +42,8 @@ export default function FinalCTA() {
 
         <p className="text-agri-text">
           Questions? Reach out to us at{' '}
-          <a href="mailto:hello@agriflow.tech" className="text-agri-primary font-poppins font-600 hover:underline">
-            hello@agriflow.tech
+          <a href="mailto:contact@Imbonicard.com" className="text-agri-primary font-poppins font-600 hover:underline">
+            contact@imbonicard.com
           </a>
         </p>
       </div>

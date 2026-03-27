@@ -29,7 +29,7 @@ export default function PartnerSection() {
             </h2>
 
             <p className="text-xl text-agri-text mb-8 leading-relaxed">
-              AgriFlow partners with organizations across agriculture, environmental initiatives, green energy programs, and community development working to improve outcomes and track program impact.
+              Imbonicard partners with organizations across agriculture, environmental initiatives, green energy programs, and community development working to improve outcomes and track program impact.
             </p>
 
             <div className="mb-10">
@@ -44,15 +44,15 @@ export default function PartnerSection() {
               </div>
             </div>
 
-            <Button variant="primary" size="lg" className="flex items-center gap-2">
-              Partner With AgriFlow
+            <Button variant="primary" size="lg" className="flex items-center gap-2" onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              Partner With Imbonicard
               <ArrowRight className="w-5 h-5" />
             </Button>
           </div>
 
           <div className="animate-slide-in-right">
             <img
-              src="https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="business-people.jpg"
               alt="Partnership"
               loading="lazy"
               className="rounded-xl shadow-medium w-full h-96 object-cover"

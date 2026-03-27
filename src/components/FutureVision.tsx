@@ -38,7 +38,7 @@ export default function FutureVision() {
             Building Digital Infrastructure for Impact Monitoring
           </h2>
           <p className="text-xl text-agri-text max-w-3xl mx-auto">
-            AgriFlow aims to become a comprehensive monitoring platform for development programs worldwide, with future capabilities including advanced analytics, mobile tools, satellite monitoring, and AI-driven insights.
+            Imbonicard aims to become a comprehensive monitoring platform for development programs worldwide, with future capabilities including advanced analytics, mobile tools, satellite monitoring, and AI-driven insights.
           </p>
         </div>
 

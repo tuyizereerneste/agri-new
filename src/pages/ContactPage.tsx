@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Loader } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Button from '../components/Button';
+import React, { useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Loader,
+} from "lucide-react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import Button from "../components/Button";
 
 interface FormData {
   name: string;
@@ -15,20 +24,22 @@ interface FormData {
 
 export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    organization: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    organization: "",
+    subject: "",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -37,27 +48,46 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setError('');
+    setError("");
 
     try {
-        // Simulate API call
-      const submitError = new Error('Failed to send message. Please try again.');
+      const response = await fetch("https://formspree.io/f/mgopowbz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          organization: formData.organization,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `New message from ${formData.name}`,
+          _replyto: formData.email,
+        }),
+      });
 
-      if (submitError) throw submitError;
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
 
       setSubmitted(true);
+
+      // Reset form
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        organization: '',
-        subject: '',
-        message: '',
+        name: "",
+        email: "",
+        phone: "",
+        organization: "",
+        subject: "",
+        message: "",
       });
 
       setTimeout(() => setSubmitted(false), 5000);
     } catch (err) {
-      setError('Failed to send message. Please try again.');
+      setError("Failed to send message. Please try again.");
       console.error(err);
     } finally {
       setLoading(false);
@@ -67,35 +97,35 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'hello@agriflow.tech',
-      href: 'mailto:hello@agriflow.tech',
+      label: "Email",
+      value: "contact@imbonicard.com",
+      href: "mailto:contact@imbonicard.com",
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+250 784 263 852',
-      href: 'tel:+250 784 263 852',
+      label: "Phone",
+      value: "+250 784 263 852",
+      href: "tel:+250 784 263 852",
     },
     {
       icon: MapPin,
-      label: 'Address',
-      value: '1 KN 78 St, Kigali, Rwanda',
-      href: '#',
+      label: "Address",
+      value: "1 KN 78 St, Kigali, Rwanda",
+      href: "https://maps.app.goo.gl/5Yp6SGw6vfhhM7gj9",
     },
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Instagram, href: "#", label: "Instagram" },
   ];
 
   return (
     <>
       <Navigation />
-      <div className="bg-agri-background min-h-screen pt-20">
+      <div id="contact" className="bg-agri-background min-h-screen pt-20">
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 animate-fade-in">
@@ -103,9 +133,10 @@ export default function ContactPage() {
                 Get In Touch
               </h1>
               <p className="text-xl text-agri-text max-w-2xl mx-auto">
-                Have questions about AgriFlow? Want to discuss a partnership or explore how our
-                platform can support your agricultural, environmental, or development projects?
-                We'd love to hear from you.
+                Have questions about Imbonicard? Want to discuss a partnership
+                or explore how our platform can support your agricultural,
+                environmental, or development projects? We'd love to hear from
+                you.
               </p>
             </div>
 
@@ -126,7 +157,9 @@ export default function ContactPage() {
 
                   {error && (
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                      <p className="text-red-800 font-poppins font-600">{error}</p>
+                      <p className="text-red-800 font-poppins font-600">
+                        {error}
+                      </p>
                     </div>
                   )}
 
@@ -205,9 +238,15 @@ export default function ContactPage() {
                         <option value="">Select a subject</option>
                         <option value="demo">Request a Demo</option>
                         <option value="partnership">Partnership Inquiry</option>
-                        <option value="agricultural">Agricultural Project Monitoring</option>
-                        <option value="environmental">Environmental Project Monitoring</option>
-                        <option value="green_energy">Green Energy Data Tracking</option>
+                        <option value="agricultural">
+                          Agricultural Project Monitoring
+                        </option>
+                        <option value="environmental">
+                          Environmental Project Monitoring
+                        </option>
+                        <option value="green_energy">
+                          Green Energy Data Tracking
+                        </option>
                         <option value="support">Technical Support</option>
                         <option value="other">Other</option>
                       </select>
@@ -240,7 +279,7 @@ export default function ContactPage() {
                           Sending...
                         </>
                       ) : (
-                        'Send Message'
+                        "Send Message"
                       )}
                     </Button>
                   </form>
@@ -303,7 +342,9 @@ export default function ContactPage() {
                 </div>
 
                 <div className="bg-gradient-to-br from-agri-primary to-agri-secondary rounded-xl p-8 text-white">
-                  <h3 className="text-2xl font-poppins font-700 mb-4">Office Hours</h3>
+                  <h3 className="text-2xl font-poppins font-700 mb-4">
+                    Office Hours
+                  </h3>
                   <div className="space-y-2 text-green-100">
                     <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>
                     <p>Saturday - Sunday: Closed</p>
@@ -320,25 +361,27 @@ export default function ContactPage() {
               Monitoring Solutions for Every Sector
             </h2>
             <p className="text-lg text-agri-text max-w-3xl mx-auto mb-12">
-              AgriFlow provides comprehensive data collection and monitoring solutions for
-              agricultural programs, environmental projects, green energy initiatives, and
-              development programs worldwide.
+              Imbonicard provides comprehensive data collection and monitoring
+              solutions for agricultural programs, environmental projects, green
+              energy initiatives, and development programs worldwide.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  title: 'Agricultural Programs',
-                  description: 'Monitor farmer networks, land usage, and crop production.',
-                },
-                {
-                  title: 'Environmental Projects',
+                  title: "Agricultural Programs",
                   description:
-                    'Track conservation initiatives, biodiversity data, and environmental metrics.',
+                    "Monitor farmer networks, land usage, and crop production.",
                 },
                 {
-                  title: 'Green Energy',
-                  description: 'Monitor renewable energy projects and sustainability metrics.',
+                  title: "Environmental Projects",
+                  description:
+                    "Track conservation initiatives, biodiversity data, and environmental metrics.",
+                },
+                {
+                  title: "Green Energy",
+                  description:
+                    "Monitor renewable energy projects and sustainability metrics.",
                 },
               ].map((sector, index) => (
                 <div
